@@ -40,3 +40,14 @@ Conteúdo: `docs/` (7 SDD), `src/` (4 pacotes), `tests/` (2), `pyproject.toml`, 
 
 - **Remoto GitHub.** `ubiratantavares/SmartDemandLab` não existe. A criação e o push (`gh repo create ... --source . --push`) aguardam a decisão do usuário sobre a visibilidade (público ou privado).
 - **`forecasting/requirements.txt`.** Arquivo legado de pip, anterior à adoção do uv. Contradiz a diretriz "todo o gerenciamento do projeto se dará pelo uv"; candidato a remoção ou migração para `pyproject.toml`.
+
+## 4. Atualização 2026-11-18 17:33: repositório remoto
+
+| # | Comando | Resultado |
+|---|---------|-----------|
+| 1 | Varredura de segredos (`git ls-files \| xargs grep` por api_key, token, senha, ghp_, sk-, AKIA, chaves privadas) | 0 ocorrências |
+| 2 | `gh repo create ubiratantavares/SmartDemandLab --public --source . --remote origin --push` | `Created repository`, `Pushed commits` |
+| 3 | `gh repo view` | `https://github.com/ubiratantavares/SmartDemandLab PUBLIC main` |
+| 4 | `git ls-remote origin main` | `a9b6ebf203d690ab32cc5f61f22d89fbcb72dc0d`, igual ao HEAD local |
+
+Pendência "Remoto GitHub" **resolvida**. A pendência `requirements.txt` segue em MIGRACAO_DEPENDENCIAS_execution.md.
