@@ -1,0 +1,18 @@
+[project]
+name = "smartdemandlab"
+version = "0.1.0"
+description = "Simulação e controle preditivo de demanda elétrica com intervalos de previsão de 99%."
+readme = "docs/VISION.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas",
+    "numpy",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]

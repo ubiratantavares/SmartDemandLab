@@ -1,0 +1,30 @@
+# Ambiente virtual (recriável com `uv sync`)
+.venv/
+
+# Bytecode Python
+__pycache__/
+*.py[cod]
+
+# Cobertura (gerada pelo pytest-cov a cada execução; ver pytest.ini)
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Caches de ferramentas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Datasets sintéticos gerados (reproduzíveis por seed; ver docs/DATA_SPECIFICATION.md)
+datasets/
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
